@@ -1,16 +1,26 @@
-# This is a sample Python script.
+from tkinter import *
+from tkinter.ttk import *
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+window = Tk()
+
+#
+# Window setup
+#
+window.title('Generalized Eigenvalue Decomposition')
+
+window.resizable(False, False)
+
+window_width = 1200
+window_height = 800
+
+screen_width = window.winfo_screenwidth()
+screen_height = window.winfo_screenheight()
+
+x_coordinate = int((screen_width/2) - (window_width/2))
+y_coordinate = int((screen_height/2) - (window_height/2))
+
+window.geometry(f"{window_width}x{window_height}+{x_coordinate}+{y_coordinate}")
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+window.mainloop()
